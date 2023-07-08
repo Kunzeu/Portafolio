@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<header class="row bg-black">
+    <div class="col-md-4">
+<img src="{% static 'portafolio/profile.jpg' %}" alt="">
+    </div>
+
+    <div class="col-md-8 my-auto">
+        <h1>I am <strong>Jhon Edgar Fajardo Medrano</strong></h1>
+        <h3>I am a Python BackEnd Developer</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quos est distinctio assumenda, atque nobis facere necessitatibus officiis soluta, eos expedita vitae error, cumque repellat explicabo libero doloremque harum! Delectus, quisquam! Voluptatum soluta, sit non laborum facilis tenetur. Officiis, praesentium suscipit eum fugit magni in. Neque corrupti numquam eos quibusdam? Omnis commodi pariatur rem accusantium veniam. Molestias repellat sit laboriosam quae voluptates esse adipisci ipsa suscipit tempora, numquam illum facilis eligendi, modi quibusdam dolorum, dolore possimus! Nisi sed illo harum dolore ea quidem possimus nostrum ipsa explicabo aliquid dolorum fuga, corporis quaerat aliquam iure, suscipit ex, hic quae labore facilis.</p>
+        <a href="{% static 'portafolio/CV.pdf' %}" class="btn-primary btn-lg rounded-0 my-3">Download CV</a>
+    </div>
+</header>
+
+
+
+<div class="row my-4 text-center">
+
+    <h3>My Projects</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, ad.</p>
+
+{% for project in projects%}
+
+<div class="col-md-4 p-4">
+    <div class="card bg-black card-project">
+        <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top">
+        <div class="card-body">
+           
+        <h2>{{project.title}}</h2>
+        <p>{{project.descripcion}}</p>
+        
+        {% if project.urls %}
+        <a href="{{project.urls}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.urls}}</a>
+
+        {% endif %}
+
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+</div>

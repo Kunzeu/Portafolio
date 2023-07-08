@@ -1,0 +1,13 @@
+{
+    "pythonAutoImport.pythonInterpreterPath": "pythonAutoImport.python",
+    "python.analysis.addImport.exactMatchOnly": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.downloadStubs": true,
+    "python.analysis.enableSyncServer": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none"
+}
