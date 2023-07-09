@@ -11,8 +11,15 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'blog:posts' %}">Blog</a>
           </li>
-          <li class="nav-item dropdown d-flex align-items-center">
-            <a class="btn btn-primary btn-sm" href="{% static 'portafolio/cv.pdf' %}" target="_blank">Download CV</a>
+          <li class="nav-item dropdown  d-flex align-items-center">
+            <a class="btn btn-primary btn-sm dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Download CV's
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="{% static 'portafolio/English CV.pdf' %}"  target="_blank">Download CV EN</a>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="{% static 'portafolio/Español CV.pdf' %}"  target="_blank">Descargar CV ESP</a>
+                </ul>
           </li>
         </ul>
       </div>

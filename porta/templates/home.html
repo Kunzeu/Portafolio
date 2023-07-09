@@ -10,10 +10,12 @@
     </div>
 
     <div class="col-md-8 my-auto">
-        <h1>I am <strong>Jhon Edgar Fajardo Medrano</strong></h1>
-        <h3>I am a Python BackEnd Developer</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quos est distinctio assumenda, atque nobis facere necessitatibus officiis soluta, eos expedita vitae error, cumque repellat explicabo libero doloremque harum! Delectus, quisquam! Voluptatum soluta, sit non laborum facilis tenetur. Officiis, praesentium suscipit eum fugit magni in. Neque corrupti numquam eos quibusdam? Omnis commodi pariatur rem accusantium veniam. Molestias repellat sit laboriosam quae voluptates esse adipisci ipsa suscipit tempora, numquam illum facilis eligendi, modi quibusdam dolorum, dolore possimus! Nisi sed illo harum dolore ea quidem possimus nostrum ipsa explicabo aliquid dolorum fuga, corporis quaerat aliquam iure, suscipit ex, hic quae labore facilis.</p>
-        <a href="{% static 'portafolio/CV.pdf' %}" class="btn-primary btn-lg rounded-0 my-3">Download CV</a>
+        <h1>I'm <strong>Jhon Edgar Fajardo Medrano</strong></h1>
+        <h3>I'm a BackEnd Developer</h3>
+        <p>I am passionate about programming and I am looking for an opportunity to develop professionally in this field. I have acquired skills in problem solving, fast learning and keeping up with the latest technologies. I am improving my technical skills, building a portfolio and participating in programming communities. In addition, I am looking for job opportunities and preparing for interviews. I am committed to continue to cultivate my passion for programming and apply my skills on the job.</p>
+        <a href="{% static 'portafolio/English CV.pdf' %}" class=" btn btn-primary btn-sm">Download CV EN</a>
+        <a href="{% static 'portafolio/Español CV.pdf' %}" class="btn btn-primary btn-sm">DESCARGAR CV ESP</a>
+
     </div>
 </header>
 
@@ -22,7 +24,7 @@
 <div class="row my-4 text-center">
 
     <h3>My Projects</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, ad.</p>
+    <p>Welcome to my project portfolio! Here you will find a compilation of all the projects to which I have dedicated time and effort. Each of these projects represents my passion for creativity, problem solving and constant learning. Through them, I have had the opportunity to explore different technologies, develop skills and face exciting challenges. Each project is a reflection of my dedication and commitment to deliver quality results. I invite you to explore and discover more about my projects and my career as a developer!.</p>
 
 {% for project in projects%}
 
@@ -43,7 +45,11 @@
     </div>
 </div>
 
+  
+
 {% endfor %}
+{% include 'footer.html' %}
 
 {% endblock %}
+
 </div>

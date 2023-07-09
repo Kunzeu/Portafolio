@@ -10,3 +10,39 @@ body{
     border: 1px solid #fff;
     cursor: pointer;
 }
+
+footer {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-links li {
+    margin-right: 10px;
+  }
+  
+  .footer-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    background-color: #0d6efd; /* Cambia el color de fondo en el estado de hover a #0d6efd */
+    color: white;
+  }
+  
