@@ -15,7 +15,7 @@ environ.Env.read_env()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-#fcos!ur2(8llk#)%x!4f2i#9m84na4#7hs(vm4gwmftw_zsiz'
 
-DEBUG = False
+DEBUG = False   
 
 ALLOWED_HOSTS = ['*']
 
@@ -84,7 +84,7 @@ DATABASES = {
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.parse(env('DATABASES_URL'))
+    'default': dj_database_url.parse(env('DATABASE_URL'))
 
 }
 
