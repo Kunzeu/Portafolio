@@ -16,13 +16,11 @@ environ.Env.read_env()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", default="my_secret_key")
 
-DEBUG = False   
+DEBUG = True   
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-RENDER_EXTRENAL_HOSTNAME = os.environ.get('RENDER_EXTRENAL_HOSTNAME')
-if RENDER_EXTRENAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTRENAL_HOSTNAME)
+
 
 
 # Application definition
@@ -127,8 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # Following settings only make sense on production and may break development environments.
-if 'RENDER' in os.environ: 
-    # Tell Django to copy statics to the `staticfiles` directory
+if not DEBUG:  # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Turn on WhiteNoise storage backend that takes care of compressing static files
